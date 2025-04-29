@@ -82,7 +82,7 @@ app.post('/api/transfer', (req, res) => {
     return res.status(400).json({ error: "Не все поля заполнены" });
   }
   
-  if (isNaN(amount) {
+  if (isNaN(amount)) {  // Исправлено: добавлена закрывающая скобка
     return res.status(400).json({ error: "Некорректная сумма" });
   }
   
